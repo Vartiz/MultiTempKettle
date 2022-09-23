@@ -1,4 +1,4 @@
-the plan is to install a PCB ring on the bottom of the kettle to pass the temperature of the water, idealy use at least 2 probes;
+the plan is to install a PCB ring on the bottom of the kettle to pass the temperature of the water, idealy use at least 2 probes (pico has 3 ADCs);
 on the ring there will be a common GND for all probes, and each track will be the reading of each probe.
 
 the base will have spring contacts the will mate with the ring on the kettle, the uC will control the temperature via a NC Solid State Relay
@@ -8,3 +8,29 @@ the uC will have an encoder to select the temperature, a 2 digit 7 segment displ
 and maybe some buttons and leds to have quick selection.
 
 the plan is to use a Raspberry Pi pico as uC, programed in C
+
+PIN OUT:
+
+ADC0: PIN31, GPIO26;
+ADC1: PIN32, GPIO27;
+ADC2: PIN34, GPIO28;
+A_GND: PIN33;
+ADC_VREF: PIN35;
+
+7seg_0: GPIO0 - GPIO7;
+7seg_1: GPIO8 - GPIO15;
+
+encoderA: PIN21, GPIO16;
+encoderB: PIN22, GPIO17;
+Encoders:
+https://cz.rs-online.com/web/p/mechanicke-rotacni-kodery/7377748P
+https://cz.rs-online.com/web/p/mechanicke-rotacni-kodery/7377773P
+
+encoderSW: PIN24, GPIO18;
+
+LED_END: PIN25, GPIO19;
+
+Button1: PIN26, GPIO20;
+Button2: PIN27, GPIO21;
+
+Buzzer: PIN29, GPIO22;
