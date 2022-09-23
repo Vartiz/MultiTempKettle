@@ -1,0 +1,10 @@
+the plan is to install a PCB ring on the bottom of the kettle to pass the temperature of the water, idealy use at least 2 probes;
+on the ring there will be a common GND for all probes, and each track will be the reading of each probe.
+
+the base will have spring contacts the will mate with the ring on the kettle, the uC will control the temperature via a NC Solid State Relay
+this will be done in this away so the just boil will work the same away as before;
+
+the uC will have an encoder to select the temperature, a 2 digit 7 segment display, leds to signify the end of the heat cicle,
+and maybe some buttons and leds to have quick selection.
+
+the plan is to use a Raspberry Pi pico as uC, programed in C
