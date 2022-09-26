@@ -4,7 +4,7 @@ on the ring there will be a common GND for all probes, and each track will be th
 the base will have spring contacts the will mate with the ring on the kettle, the uC will control the temperature via a NC Solid State Relay
 this will be done in this away so the just boil will work the same away as before;
 
-the uC will have an encoder to select the temperature, a 2 digit 7 segment display, leds to signify the end of the heat cicle,
+the uC will have an encoder to select the temperature, I2C OLED dispaly, leds to signify the end of the heat cicle,
 and maybe some buttons and leds to have quick selection.
 
 the plan is to use a Raspberry Pi pico as uC, programed in C
@@ -17,8 +17,8 @@ ADC2: PIN34, GPIO28;
 A_GND: PIN33;
 ADC_VREF: PIN35;
 
-7seg_0: GPIO0 - GPIO7;
-7seg_1: GPIO8 - GPIO15;
+I2C0, SDA: PIN6, PGIO4;
+      SCL: PIN7, GPIO5;
 
 encoderA: PIN21, GPIO16;
 encoderB: PIN22, GPIO17;
@@ -29,8 +29,10 @@ https://cz.rs-online.com/web/p/mechanicke-rotacni-kodery/7377773P
 encoderSW: PIN24, GPIO18;
 
 LED_END: PIN25, GPIO19;
+LED_Heating: PIN20, GPIO15
 
-Button1: PIN26, GPIO20;
-Button2: PIN27, GPIO21;
+ButtonBoil: PIN26, GPIO20;
+Buttoncafe: PIN27, GPIO21;
+ButtonTea: PIN19, GPIO14
 
 Buzzer: PIN29, GPIO22;
